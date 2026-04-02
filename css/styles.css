@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --background: #f0ebe1;
+  --dark: #262522;
+  --light: #fffbf2;
+  --primary-color-1: #9fdc26;
+  --primary-color-2: #f29c33;
+  --primary-color-3: #ee6352;
+  --primary-color-4: #c4e5fc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "Roboto", sans-serif;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--background);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border: 1px solid var(--dark);
+  border-radius: 32px;
+  width: 80vw;
+  margin: 16px auto;
+  font-family: "Roboto", sans-serif;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color-3);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  scale: 1;
+  transition: scale 0.3s ease-out;
+}
+
+.logo:hover {
+  scale: 1.05;
+}
+
+.logo_text {
+  color: var(--dark);
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 16px;
+}
+
+.nav_ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.nav_ctas .search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  scale: 1;
+  background-color: color-mix(in srgb, var(--dark), transparent 92%);
+  transition:
+    background-color 0.3s ease-out,
+    scale 0.3s ease-out;
+}
+
+.nav_ctas .search:hover {
+  background-color: color-mix(in srgb, var(--dark), transparent 72%);
+  scale: 1.05;
+}
+
+.nav_ctas .search .search_icon {
+  width: 24px;
+  height: 24px;
+}
+
+.nav_ctas .subscribe {
+  background-color: var(--dark);
+  color: var(--light);
+  width: 122px;
+  height: 38px;
+  border: none;
+  scale: 1;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 32px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: scale 0.3s ease-out;
+}
+
+.nav_ctas .subscribe:hover {
+  scale: 1.05;
+}
