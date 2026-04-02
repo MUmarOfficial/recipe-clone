@@ -22,6 +22,10 @@
 
 body {
   background-color: var(--background);
+  place-items: center;
+  margin: 16px 0px;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 header {
@@ -30,10 +34,15 @@ header {
   justify-content: space-between;
   padding: 16px 24px;
   border: 1px solid var(--dark);
+  background-color: var(--background);
   border-radius: 32px;
   width: 80vw;
-  margin: 16px auto;
+  max-width: 1200px;
   font-family: "Roboto", sans-serif;
+  position: sticky;
+  top: 16px;
+  margin: 0 auto;
+  z-index: 10;
 }
 
 nav ul {
@@ -51,6 +60,16 @@ nav ul li a {
   line-height: 24px;
   font-size: 14px;
   font-weight: 500;
+  color: color-mix(in srgb, var(--dark), transparent 72%);
+  transition: color 0.3s ease-out;
+}
+
+nav ul li a:hover {
+  color: var(--dark);
+}
+
+.nav-btn.active {
+  color: var(--dark);
 }
 
 nav ul li a::after {
@@ -68,6 +87,19 @@ nav ul li a::after {
 
 nav ul li a:hover::after {
   transform: scaleX(1);
+}
+
+.nav-btn.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color-3);
+  transform: scaleX(1);
+  transform-origin: center;
+  transition: transform 0.3s ease-out;
 }
 
 .logo {
@@ -122,21 +154,167 @@ nav ul li a:hover::after {
   height: 24px;
 }
 
-.nav_ctas .subscribe {
-  background-color: var(--dark);
-  color: var(--light);
-  width: 122px;
-  height: 38px;
+main {
+  margin: 16px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.hero {
+  background-image: url("../assets/hero-img.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80vw;
+  height: 70vh;
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+}
+
+.hero-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  color: var(--background);
+  height: 100%;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--background);
+}
+
+.hero-h {
+  font-size: 80px;
+  color: var(--background);
+  text-align: center;
+  line-height: 70px;
+  text-transform: uppercase;
+}
+
+.hero-p {
+  font-size: 21px;
+  text-align: center;
+  color: var(--background);
+  width: 427px;
+}
+
+.hero-btn {
+  background-color: var(--primary-color-2);
+  color: var(--dark);
+  width: 188px;
+  height: 42px;
   border: none;
   scale: 1;
+  padding: 10px 24px;
+  border-radius: 24px;
   font-size: 14px;
   font-weight: 500;
-  border-radius: 32px;
-  padding: 10px 24px;
+  text-transform: uppercase;
   cursor: pointer;
   transition: scale 0.3s ease-out;
 }
 
-.nav_ctas .subscribe:hover {
+.hero-btn:hover {
   scale: 1.05;
+}
+
+.explore {
+  background-color: var(--primary-color-4);
+  width: 80vw;
+  height: 60vh;
+  padding: 40px;
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 238px;
+}
+
+.filter-text-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.filter-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.filter-main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.explore-btn {
+  background-color: var(--primary-color-3);
+  border: none;
+  scale: 1;
+  padding: 4px 10px;
+  border-radius: 14px;
+  color: var(--background);
+}
+
+.filter-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--dark);
+}
+
+.filter-text h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.filter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--dark);
 }

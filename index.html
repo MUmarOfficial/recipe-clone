@@ -6,32 +6,110 @@
     <title>Cooks Delight - Cooking Blog Site</title>
     <link rel="shortcut icon" href="./assets/Logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/utils.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <a href="#home" class="logo">
-          <img src="./assets/Logo.svg" alt="Logo" class="logo_img" />
-          <h1 class="logo_text">Cooks<br>Delight</h1>
-        </a>
+    <header>
+      <a href="#home" class="logo">
+        <img src="./assets/Logo.svg" alt="Logo" class="logo_img" />
+        <h1 class="logo_text">Cooks<br />Delight</h1>
+      </a>
 
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About us</a></li>
-            <li><a href="#recipes">Recipes</a></li>
-            <li><a href="#cooking_tips">Cooking tips</a></li>
-          </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="#home" class="nav-btn">Home</a></li>
+          <li><a href="#recipes" class="nav-btn">Recipes</a></li>
+          <li><a href="#cooking_tips" class="nav-btn">Cooking tips</a></li>
+          <li><a href="#about" class="nav-btn">About us</a></li>
+        </ul>
+      </nav>
 
-        <div class="nav_ctas">
-          <div class="search">
-            <img src="./assets/search.svg" alt="search-icon" class="search_icon"/>
-          </div>
-          <button class="subscribe">Subscribe</button>
+      <div class="nav_ctas">
+        <div class="search">
+          <img
+            src="./assets/search.svg"
+            alt="search-icon"
+            class="search_icon"
+          />
         </div>
-      </header>
-    </div>
+        <button class="subscribe">Subscribe</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="home">
+        <section id="hero" class="hero">
+          <div class="hero-main">
+            <div class="hero-content">
+              <h1 class="hero-h">Unleash Culinary<br />Excellence</h1>
+              <p class="hero-p">
+                Explore a world of flavors, discover handcrafted recipes, and
+                let the aroma of our passion for cooking fill your kitchen
+              </p>
+            </div>
+            <button class="hero-btn">
+              <a href="#recipes">Explore recipes</a>
+            </button>
+          </div>
+        </section>
+
+        <section id="explore" class="explore">
+          <div class="filter-text-wrapper">
+            <div class="filter-content">
+              <div class="filter-main">
+                <button class="explore-btn">Explore</button>
+                <div class="filter-text">
+                  <h2>Our diverse Palette</h2>
+                  <p>
+                    If you are a breakfast enthusiast, a connoisseur of savory
+                    delights, or on the lookout for irresistible desserts, our
+                    curated selection has something to satisfy every palate.
+                  </p>
+                </div>
+              </div>
+              <button class="primary-btn">
+                <a href="#recipes">See more</a>
+              </button>
+            </div>
+          </div>
+          <div class="filter-wrapper">
+            <div class="filter">
+              <img
+                src="./assets/breakfest.svg"
+                alt="breakfest"
+                class="filter-img"
+              />
+              <p class="filter-txt">breakfest</p>
+            </div>
+            <div class="filter">
+              <img src="./assets/lunch.svg" alt="lunch" class="filter-img" />
+              <p class="filter-txt">lunch</p>
+            </div>
+            <div class="filter">
+              <img src="./assets/dinner.svg" alt="dinner" class="filter-img" />
+              <p class="filter-txt">dinner</p>
+            </div>
+            <div class="filter">
+              <img
+                src="./assets/dessert.svg"
+                alt="dessert"
+                class="filter-img"
+              />
+              <p class="filter-txt">dessert</p>
+            </div>
+            <div class="filter">
+              <img
+                src="./assets/quick-bite.svg"
+                alt="quick-bite"
+                class="filter-img"
+              />
+              <p class="filter-txt">quick bite!</p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
     <script src="./js/main.js"></script>
   </body>
 </html>
