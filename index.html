@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./assets/Logo.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/utils.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
     <header>
@@ -15,7 +16,7 @@
         <h1 class="logo_text">Cooks<br />Delight</h1>
       </a>
 
-      <nav>
+      <nav class="header-nav" aria-label="Main Navigation">
         <ul>
           <li><a href="#home" class="nav-btn">Home</a></li>
           <li><a href="#recipes" class="nav-btn">Recipes</a></li>
@@ -32,7 +33,7 @@
             class="search_icon"
           />
         </div>
-        <button class="subscribe">Subscribe</button>
+        <button class="subscribe"><a href="#cta_section">Subscribe</a></button>
       </div>
     </header>
 
@@ -108,7 +109,58 @@
           </div>
         </section>
       </section>
+
+      <section class="cta_section" id="cta_section">
+        <div class="cta_text">
+          <small>subscribe</small>
+          <h3>Join the fun<br />Subscribe now!</h3>
+          <p>
+            Subscribe to our newsletter for a weekly serving of recipes, cooking
+            tips, and exclusive insights straight to your inbox.
+          </p>
+        </div>
+        <form action="" method="post" class="cta_form">
+          <div class="cta_input">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit" class="subscribe">Subscribe</button>
+          </div>
+        </form>
+      </section>
     </main>
+
+    <footer>
+      <div class="footer_main">
+        <a href="#home" class="footer_logo">
+          <img src="./assets/footer-logo.svg" alt="Footer Logo" class="footer_logo_img" />
+          <h1 class="footer_logo_text">Cooks<br />Delight</h1>
+        </a>
+
+        <nav class="footer_nav" aria-label="Footer Navigation">
+          <ul>
+            <li><a href="#home" class="footer_nav_btn">HOME</a></li>
+            <li><a href="#recipes" class="footer_nav_btn">RECIPES</a></li>
+            <li><a href="#cooking_tips" class="footer_nav_btn">COOKING TIPS</a></li>
+            <li><a href="#about" class="footer_nav_btn">ABOUT US</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer_socials">
+          <a href="#" target="_blank"><img src="./assets/tiktok.svg" alt="TikTok" class="social_icon" /></a>
+          <a href="#" target="_blank"><img src="./assets/facebook.svg" alt="Facebook" class="social_icon" /></a>
+          <a href="#" target="_blank"><img src="./assets/insta.svg" alt="Instagram" class="social_icon" /></a>
+          <a href="#" target="_blank"><img src="./assets/youtube.svg" alt="YouTube" class="social_icon" /></a>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p class="footer_copyright">COPYRIGHT: &copy; 2026 COOKS DELIGHT.</p>
+      </div>
+    </footer>
 
     <script src="./js/main.js"></script>
   </body>

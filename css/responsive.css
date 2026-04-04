@@ -1,0 +1,29 @@
+@media screen and (max-width: 1024px) {
+  footer {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer_main {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer_nav ul {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  footer {
+    width: 95vw;
+    padding: 32px 24px;
+  }
+
+  .footer_nav ul {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
