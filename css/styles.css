@@ -362,6 +362,160 @@ main {
   border-bottom: 1px solid var(--dark);
 }
 
+.featured-recipes {
+  width: 80vw;
+  border: 1px solid color-mix(in srgb, var(--dark), transparent 80%);
+  border-radius: 32px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: var(--background);
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.slider-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.slider-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--dark);
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.slider-btn img {
+  width: 24px;
+  height: 24px;
+  transition: filter 0.2s ease;
+}
+
+.slider-btn:hover {
+  background: var(--dark);
+}
+
+.slider-btn:hover img {
+  filter: invert(1);
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.recipe-card {
+  background-color: var(--light);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--dark), transparent 85%);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  z-index: 1;
+}
+
+.recipe-img-wrapper {
+  position: relative;
+  height: 280px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.recipe-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.recipe-card:hover .recipe-img {
+  transform: scale(1.05);
+}
+
+.vegan-badge {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 70px;
+  height: 70px;
+  z-index: 10;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.vegan-badge:hover {
+  transform: rotate(15deg) scale(1.05);
+}
+
+.recipe-content {
+  padding: 32px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 32px;
+}
+
+.recipe-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.recipe-info h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.recipe-info p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--dark), transparent 30%);
+}
+
+.recipe-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  border-top: 1px solid color-mix(in srgb, var(--dark), transparent 90%);
+  padding-top: 24px;
+}
+
+.recipe-meta {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--dark), transparent 20%);
+}
+
+.recipe-btn {
+  font-size: 12px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
 .cta_section {
   background-image: url(../assets/cta-bg.svg);
   background-size: cover;
